@@ -1,11 +1,463 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+<link rel="icon" type="image/x-icon" href="descargar(12).jpg../assets/favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/script.js"></script>
   </head>
-  <body>
-    <p>Hello World!</p>
+
+  
+    <body>
+  <div id="page-top"></div>
+  <div class="bg" aria-hidden="true">
+      <div class="grain"></div>
+      <div class="glow glow--a"></div>
+      <div class="glow glow--b"></div>
+      <div class="glow glow--c"></div>
+      <div class="gridlines"></div>
+    </div>
+
+    <!-- Scroll progress (no se ve al inicio) -->
+    <div class="scrollmeter" aria-hidden="true">
+      <span class="scrollmeter__fill"></span>
+    </div>
+
+    <!-- Header -->
+    <header class="topbar" id="top">
+      <div class="container topbar__inner">
+        <a class="logo" href="#top" aria-label="Inicio">
+          <span class="logo__dot"></span>
+          <span class="logo__text">NEON<span>PORTFOLIO</span></span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación">
+          <a class="nav__link" href="#about">Sobre mí</a>
+          <a class="nav__link" href="#work">Proyectos</a>
+          <a class="nav__link" href="#skills">Skills</a>
+          <a class="nav__link" href="#contact">Contacto</a>
+        </nav>
+
+        <button class="burger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Menú móvil -->
+    <aside class="mobile" aria-hidden="true">
+      <div class="mobile__panel glass">
+        <a class="mobile__link" href="#about">Sobre mí</a>
+        <a class="mobile__link" href="#work">Proyectos</a>
+        <a class="mobile__link" href="#skills">Skills</a>
+        <a class="mobile__link" href="#contact">Contacto</a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="pill reveal">
+              <span class="pill__dot"></span>
+              Diseño · Ilustración · Motion
+            </p>
+
+            <h1 class="hero__title reveal">
+              <span
+                class="type neon"
+                data-type='["PORTFOLIO"]'
+                data-speed="44"
+                data-cursor="true"
+              ></span>
+            </h1>
+
+            <p class="hero__lead reveal">
+              Estética oscura con <strong>glassmorphism</strong> y acentos
+              <strong>rosa neón</strong>. Scroll con animaciones suaves y
+              estructura pensada para enseñar trabajo.
+            </p>
+
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="#work">Ver proyectos</a>
+              <a class="btn btn--ghost" href="#contact">Contacto</a>
+            </div>
+
+            <div class="hero__chips reveal">
+              <span class="chip">Fotografías</span>
+              <span class="chip">Branding</span>
+              <span class="chip">Motion</span>
+              <span class="chip">Ilustraciones</span>
+            </div>
+          </div>
+
+          <div class="hero__card reveal">
+            <div class="profile glass">
+              <div class="profile__top">
+                <div class="pfp" aria-hidden="true"></div>
+                <div>
+                  <p class="profile__name">Tu Nombre</p>
+                  <p class="profile__role">Creative Designer</p>
+                </div>
+              </div>
+
+              <div class="profile__stats">
+                <div class="stat">
+                  <span class="stat__n">12</span>
+                  <span class="stat__t">Proyectos</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__n">4</span>
+                  <span class="stat__t">Años</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__n">24/7</span>
+                  <span class="stat__t">Creatividad</span>
+                </div>
+              </div>
+
+              <a class="profile__cta" href="#contact">Disponible para colaboraciones →</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="scrollhint" href="#about" aria-label="Bajar">
+          <span class="scrollhint__mouse"></span>
+          <span class="scrollhint__txt">Scroll</span>
+        </a>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="title reveal">
+              <span class="title__k">01</span> SOBRE MÍ
+            </h2>
+            <p class="section__desc reveal">
+              Presentación breve, directa y con personalidad.
+            </p>
+          </div>
+
+          <div class="grid grid--2">
+            <article class="glass card reveal">
+              <h3 class="card__title">Perfil</h3>
+              <p class="card__text">
+                Describe tu enfoque y estilo (oscuro, editorial, neón, etc.).
+                Comenta el tipo de proyectos que más disfrutas.
+              </p>
+              <div class="mini">
+                <span class="mini__k">Ubicación</span>
+                <span class="mini__v">Madrid · A distancia</span>
+              </div>
+              <div class="mini">
+                <span class="mini__k">Interés</span>
+                <span class="mini__v">Fashion · Cultura pop · Horror</span>
+              </div>
+            </article>
+
+            <article class="glass card reveal">
+              <h3 class="card__title">Servicios</h3>
+              <ul class="list">
+                <li>(Añade los servivios que ofreces como:)</li>
+                <li>Branding, dirección de arte y piezas</li>
+                <li>Ilustración y assets para redes</li>
+                <li>Fotografías</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">palabras</span>
+                <span class="badge">que</span>
+                <span class="badge">te definan</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="title reveal">
+              <span class="title__k">02</span> PROYECTOS
+            </h2>
+
+            <div class="filters reveal" role="group" aria-label="Filtros">
+              <button class="filter is-active" data-filter="all">Todo</button>
+              <button class="filter" data-filter="ui">Fotografías</button>
+              <button class="filter" data-filter="brand">Branding</button>
+              <button class="filter" data-filter="motion">Ilustraciones</button>
+            </div>
+          </div>
+
+          <div class="grid grid--3 works">
+            <a class="glass work reveal work-link" href="#case-1" data-case="case-1" data-tags="ui motion">
+  <div class="work__thumb">
+    <span class="work__chip">Fotografías</span>
+    <span class="work__sheen"></span>
+  </div>
+  <h3 class="work__title">Tçitulo 01</h3>
+  <p class="work__text">Breve descripción</p>
+  <div class="work__meta">
+    <span class="tag">Ps</span>
+    <span class="tag">Gimp</span>
+  </div>
+</a>
+
+
+            <a class="glass work reveal work-link" href="#case-2" data-case="case-2" data-tags="brand">
+  <div class="work__thumb work__thumb--b">
+    <span class="work__chip">Branding</span>
+    <span class="work__sheen"></span>
+  </div>
+  <h3 class="work__title">Título 02</h3>
+  <p class="work__text">Breve descripción</p>
+  <div class="work__meta">
+    <span class="tag">Ai</span>
+    <span class="tag">Ae</span>
+  </div>
+</a>
+
+
+            <a class="glass work reveal work-link"
+   href="#case-3"
+   data-case="case-3"
+   data-tags="motion">
+  <div class="work__thumb work__thumb--c">
+    <span class="work__chip">Ilustraciones</span>
+    <span class="work__sheen"></span>
+  </div>
+  <h3 class="work__title">Título 03</h3>
+  <p class="work__text">Breve descripción</p>
+  <div class="work__meta">
+    <span class="tag">Procreate</span>
+    <span class="tag">Ps</span>
+  </div>
+</a>
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="title reveal">
+              <span class="title__k">03</span> SKILLS
+            </h2>
+            <p class="section__desc reveal">
+              Lo importante arriba, lo demás en chips.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="glass card reveal">
+              <h3 class="card__title">Tu nivel de diseño</h3>
+
+              <div class="bars">
+                <div class="bar">
+                  <span>Ilustraciones</span>
+                  <i style="--w: 90%"></i>
+                </div>
+                <div class="bar">
+                  <span>Branding</span>
+                  <i style="--w: 78%"></i>
+                </div>
+                <div class="bar">
+                  <span>Fotografías</span>
+                  <i style="--w: 70%"></i>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass card reveal">
+              <h3 class="card__title">Tus herramientas</h3>
+              <div class="chips chips--tight">
+                <span class="chip">Figma</span>
+                <span class="chip">Photoshop</span>
+                <span class="chip">Illustrator</span>
+                <span class="chip">After Effects</span>
+                <span class="chip">InDesign</span>
+                <span class="chip">Procreate</span>
+                <span class="chip">Gimp</span>
+                <span class="chip">Visual code</span>
+              </div>
+            </article>
+
+            <article class="glass card reveal">
+              <h3 class="card__title">Tu forma de trabajar</h3>
+              <div class="chips chips--tight">
+                <span class="chip">Conceptualización</span>
+                <span class="chip">Atención al detalle</span>
+                <span class="chip">Trabajo cooperativo</span>
+                <span class="chip">Comunicación visual</span>
+                 <span class="chip">Diseño emocional</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="title reveal">
+              <span class="title__k">04</span> CONTACTO
+            </h2>
+            <p class="section__desc reveal">
+              Links directos y un mensaje rápido.
+            </p>
+          </div>
+
+          <div class="grid grid--2">
+            <article class="glass card reveal">
+              <h3 class="card__title">Links</h3>
+
+              <div class="contacts">
+                <a class="contact" href="mailto:tuemail@correo.com">
+                  <span class="contact__k">Email</span>
+                  <span class="contact__v">añade@tucorreo.com</span>
+                </a>
+                <a class="contact" href="#" target="_blank" rel="noreferrer">
+                  <span class="contact__k">Instagram</span>
+                  <span class="contact__v">@tuuser</span>
+                </a>
+                <a class="contact" href="#" target="_blank" rel="noreferrer">
+                  <span class="contact__k">LinkedIn</span>
+                  <span class="contact__v">/in/tu-perfil</span>
+                </a>
+              </div>
+
+              <a class="btn btn--primary btn--full" href="#work">Ver proyectos</a>
+            </article>
+
+            <article class="glass card reveal">
+              <h3 class="card__title">Mensaje</h3>
+
+              <form class="form" autocomplete="on">
+                <label>
+                  <span>Nombre</span>
+                  <input type="text" placeholder="Tu nombre" />
+                </label>
+
+                <label>
+                  <span>Email</span>
+                  <input type="email" placeholder="añadetu@correo.com..." />
+                </label>
+
+                <label>
+                  <span>Mensaje</span>
+                  <textarea rows="4" placeholder="Cuéntame tu idea..."></textarea>
+                </label>
+
+                <button class="btn btn--ghost" type="button">Enviar</button>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+    <section class="casezone" id="cases">
+
+  <!-- CASE 1: FOTOGRAFÍAS -->
+  <article class="case case--minimal" id="case-1">
+    <div class="container">
+      <h2 class="caseTitle reveal">Fotografías</h2>
+
+      <div class="viewer viewer--big glass reveal" data-viewer>
+        <button class="viewer__btn viewer__btn--prev" type="button" aria-label="Anterior">‹</button>
+
+        <div class="viewer__stage">
+          <img class="viewer__img" src="assets/img/descargar (11).jpg" alt="Fotografías 1" data-viewer-img />
+        </div>
+
+        <button class="viewer__btn viewer__btn--next" type="button" aria-label="Siguiente">›</button>
+
+        <div class="viewer__data" hidden>
+          <span data-src="assets/img/descargar (11).jpg" data-alt="Fotografías 1"></span>
+          <span data-src="assets/img/descargar (12).jpg" data-alt="Fotografías 2"></span>
+          <span data-src="assets/img/descargar (13).jpg" data-alt="Fotografías 3"></span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- CASE 2: BRANDING -->
+  <article class="case case--minimal" id="case-2">
+    <div class="container">
+      <h2 class="caseTitle reveal">Branding</h2>
+
+      <div class="viewer viewer--big glass reveal" data-viewer>
+        <button class="viewer__btn viewer__btn--prev" type="button" aria-label="Anterior">‹</button>
+
+        <div class="viewer__stage">
+          <img class="viewer__img" src="assets/img/X15.jpg" alt="Branding 1" data-viewer-img />
+        </div>
+
+        <button class="viewer__btn viewer__btn--next" type="button" aria-label="Siguiente">›</button>
+
+        <div class="viewer__data" hidden>
+          <span data-src="assets/img/X15.jpg" data-alt="Branding 1"></span>
+          <span data-src="assets/img/blackpink lightstick ia.jpg" data-alt="Branding 2"></span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- CASE 3: ILUSTRACIONES -->
+
+<article class="case case--minimal" id="case-3">
+  <div class="container">
+    <h2 class="caseTitle reveal">Ilustraciones</h2>
+
+    <div class="viewer viewer--big glass reveal" data-viewer>
+      <button class="viewer__btn viewer__btn--prev" type="button" aria-label="Anterior">‹</button>
+
+      <div class="viewer__stage">
+        <img
+          class="viewer__img"
+          src="assets/img/nezuko-kamado-cute-3840x2160-18712.jpg"
+          alt="Ilustración 1"
+          data-viewer-img
+        />
+      </div>
+
+      <button class="viewer__btn viewer__btn--next" type="button" aria-label="Siguiente">›</button>
+
+      <div class="viewer__data" hidden>
+        <span data-src="assets/img/nezuko-kamado-cute-3840x2160-18712.jpg" data-alt="Ilustración 1"></span>
+        <span data-src="assets/img/sukuna-angry-5k-3840x2160-16917.jpg" data-alt="Ilustración 2"></span>
+        <span data-src="assets/img/satoru-gojo-amoled-3840x2160-16769.jpg" data-alt="Ilustración 3"></span>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+</section>
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> · Tu Nombre</p>
+   <a class="totop" href="#page-top" aria-label="Subir">↑</a>
+
+  </div>
+</footer>
+    </main>
   </body>
 </html>
